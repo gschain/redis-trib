@@ -3,4 +3,6 @@ RUN set -eux; \
     apt-get update; \
     apt-get install -y dnsutils; \
     rm -rf /var/lib/apt/lists/*;
-CMD ["sh"]
+COPY create_cluster.sh /
+RUN chmod o+x /create_cluster.sh
+ENTRYPOINT ["/create_cluster.sh"]
