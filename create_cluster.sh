@@ -43,4 +43,4 @@ do
 done
 
 echo $hosts
-eval "/usr/local/bin/redis-cli --cluster create --cluster-replicas $replicas $hosts"
+eval "/usr/local/bin/redis-cli --cluster create --cluster-replicas $replicas $hosts --cluster-yes"
